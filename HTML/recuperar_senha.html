@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/recuperar_senha.css">
+    <title>Recuperar Senha</title>
+</head>
+<body>
+
+    <div class="bars-bg">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="container">
+        <h1>Recuperar Senha</h1>
+
+        <div class="input-box">
+            <input type="text" placeholder="Seu email" id="email" autocomplete="off">
+            <i class="bx bx-envelope"></i>
+        </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="Senha nova" id="new_pass" autocomplete="new-password">
+            <i class="bx bx-lock-alt"></i>
+        </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="Confirmar senha" id="confirm_pass" autocomplete="new-password">
+            <i class="bx bx-lock-alt"></i>
+        </div>
+
+        <button class="btn" type="button" onclick="recuperarSenha()">Confirmar</button>
+
+        <p class="footer-text">Lembrou a senha? <a href="tela_de_login.html">Voltar ao login</a></p>
+    </div>
+
+    <script src="/JS/recuperar_senha.js"></script>
+</body>
+</html>

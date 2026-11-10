@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* BARRAS */
+.bars-bg {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    z-index: 0;
+}
+
+.bar {
+    flex: 1;
+    max-width: 38px;
+    border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.bar:nth-child(1)  { height: 80px;  background: #f0f0e8; animation-delay: 0s; }
+.bar:nth-child(2)  { height: 120px; background: #d0cfc7; animation-delay: 0.2s; }
+.bar:nth-child(3)  { height: 90px;  background: #a8a79f; animation-delay: 0.4s; }
+.bar:nth-child(4)  { height: 140px; background: #888780; animation-delay: 0.6s; }
+.bar:nth-child(5)  { height: 70px;  background: #5f5e5a; animation-delay: 0.8s; }
+.bar:nth-child(6)  { height: 110px; background: #444441; animation-delay: 1.0s; }
+.bar:nth-child(7)  { height: 85px;  background: #2c2c2a; animation-delay: 1.2s; }
+.bar:nth-child(8)  { height: 100px; background: #f0f0e8; animation-delay: 1.4s; }
+.bar:nth-child(9)  { height: 130px; background: #d0cfc7; animation-delay: 1.6s; }
+.bar:nth-child(10) { height: 75px;  background: #a8a79f; animation-delay: 1.8s; }
+.bar:nth-child(11) { height: 115px; background: #888780; animation-delay: 2.0s; }
+.bar:nth-child(12) { height: 95px;  background: #5f5e5a; animation-delay: 2.2s; }
+
+@keyframes float {
+    0%, 100% { transform: scaleY(1) translateY(0); }
+    50%       { transform: scaleY(1.2) translateY(-10px); }
+}
+
+/* CONTAINER */
+.container {
+    position: relative;
+    z-index: 10;
+    width: 420px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 48px 40px 36px;
+    color: #fff;
+    backdrop-filter: blur(2px);
+}
+
+.container h1 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 28px;
+    letter-spacing: -0.3px;
+}
+
+/* INPUTS */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 12px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: #252525;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 44px 0 16px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.input-box input::placeholder {
+    color: rgba(255,255,255,0.3);
+}
+
+.input-box input:focus {
+    border-color: rgba(255,255,255,0.25);
+    background: #2a2a2a;
+}
+
+.input-box i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: rgba(255,255,255,0.25);
+    pointer-events: none;
+}
+
+/* AUTOFILL */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #252525 inset !important;
+    -webkit-text-fill-color: #fff !important;
+    caret-color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* BOTÃO */
+.btn {
+    width: 100%;
+    height: 48px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn:hover  { opacity: 0.88; }
+.btn:active { transform: scale(0.98); }
+
+/* RODAPÉ */
+.footer-text {
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+}
+
+.footer-text a {
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 4px;
+    transition: color 0.2s;
+}
+
+.footer-text a:hover { color: #fff; }
